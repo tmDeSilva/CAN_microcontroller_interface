@@ -1,13 +1,27 @@
 # README #
 
-### What is this repository for? ###
+### Description ###
 
-* This repository contains the software that:
-	* Programs the microcontroller so that it can read CAN messages from the MCP2515 CAN Module
-	* Reads data sent from the microcontroller, processes it and diplays it onto a GUI
+- [`CANDataLoggerPloter.cs`]
+	* The main class
+		- Reads data from the serial port
+		- Plots the data on a graph
+		- Controls all the button and drop-down menu functionality
+		
+- [`CanDecoder.cs`]
+	- Reads `CANdbcFile.txt` and `EssentialParameters.txt` and creates 5 dictionaries
+	- `ProcessData(string pData)` processes the raw hexadecimal CAN data and returns a list of all the channel components and their decimal values
+	
+- [`DrawingArea.cs`]
+	- Responsible for drawing the SoC and SoH icons (along side the green and red progress bars)
+	- Draws two circles
+		- The First displays BMS Voltage and Current
+		- The second displays the maximum BMS temperature and the BMS power
+	- Draws the Forseti Pack image
+	
+- [`DeviceScanner.cs`]
+	- If the mode button is on serial port mode the device scanner scans device
+	- Updates the `portCombo` drop-down menu
+	
 
-### How do I get set up? ###
-
-* To find the hardware components and microcontroller program click [here](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/CAN-Reader-Arduino-Code/)
-	* (Includes an in-depth explanation of the connections and program)
-
+[Go back to the Main repository](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/main/)
