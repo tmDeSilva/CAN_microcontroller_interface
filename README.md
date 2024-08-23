@@ -1,8 +1,7 @@
 # README #
 
 ## Description
-```cpp
-```
+
 * This branch contains the microcontroller code and will:
 	* Describe the hardware used and the required connections
 	* Provide an overview of all the code's functions and libraries
@@ -61,7 +60,7 @@
 		
 	- `void loop()`
 		* Checks if a CAN Message has been received
-			* Read the CAN data ID (e.g. 7B3) and check if it is part of the `Important IDs` list
+			* Read the CAN data ID (e.g. 7B3) and check if it is part of the `importantIDs` list
 			* If the data in the CAN message (for each ID) has been changed:
 				* Replace the data already stored in a 2D array (called "arr") with the new data
 				* Write the new data to the serial port in the format `XXX X XX XX XX XX XX XX XX XX : time`
@@ -69,7 +68,7 @@
 					* `XXX` is the CAN data ID, the next `X` is the number of bytes of data (usually 8) and the next 8 pairs of nibbles (bytes) are the actual data
 					* `time` is measured in milliseconds
 			* Every "period" number of CAN messsages read process and display the most recent CAN data from OLED parameter IDs
-				* `1937 (Pack Voltage, Pack Current), 1938 (Temperature), 1939 (SoC, SoH)`
+				* `1937 (Pack Voltage, Pack Current)`, `1938 (Temperature)`, `1939 (SoC, SoH)`
 				
 	- `String processData(String pMsg)`
 		* This is a C++ version of the "decoder.cs" code that is part of the GUI
