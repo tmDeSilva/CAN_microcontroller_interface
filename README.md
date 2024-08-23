@@ -71,7 +71,7 @@
 				* `1937 (Pack Voltage, Pack Current)`, `1938 (Temperature)`, `1939 (SoC, SoH)`
 				
 	- `String processData(String pMsg)`
-		* This is a C++ version of the `CanDecoder.cs` code that is part of the GUI
+		* This is a C++ version of the [`CanDecoder.cs`](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/Can-Decoder/) code that is part of the GUI
 		* Converts the raw hexadecimal CAN data to a binary string to be processed by the `{parameter}ValCalc` functions
 		
 	- `void displayData(double pVoltage, double pCurrent, double pTemperature , int pSoC)`
