@@ -5,7 +5,7 @@
 * This branch contains the microcontroller code and will:
 	* Describe the hardware used and the required connections
 	* Provide an overview of all the code's functions and libraries
-	* Explain the code can be modified to choose the CAN data channels the MCU outputs (e.g. 7B3)
+	* Explain how the code can be modified to choose the which CAN data the user wants the MCU to output
 
 ### *Hardware Setup*
 
@@ -24,7 +24,7 @@
 	* MCU <==> HC-05
 		* D2 (Software RX) <= TX
 		* D3 (Software TX) => RX
-			* Voltage divider is required because HC-05 operates at a logic level of 3.3V
+			* A voltage divider is required because the HC-05 module operates at a logic level of 3.3V
 			* Use 1K and 2K resistors: D3 => 1K => RX; RX => 2K => GND
 		* +5V => VCC, **GND**
 	* BMS CAN Bus ==> FC684216 ==> MCP2515
@@ -67,12 +67,12 @@
 					* Each `X` represents a nibble (a hex character)
 					* `XXX` is the CAN data ID, the next `X` is the number of bytes of data (usually 8) and the next 8 pairs of nibbles (bytes) are the actual data
 					* `time` is measured in milliseconds
-			* Every "period" number of CAN messsages read process and display the most recent CAN data from OLED parameter IDs
+			* Every `period` number of CAN messsages read process and display the most recent CAN data from OLED parameter IDs
 				* `1937 (Pack Voltage, Pack Current)`, `1938 (Temperature)`, `1939 (SoC, SoH)`
 				
 	- `String processData(String pMsg)`
-		* This is a C++ version of the "decoder.cs" code that is part of the GUI
-		* Converts the raw hexadecimal CAN data to a binary string to be processed by the {parameter}ValCalc functions
+		* This is a C++ version of the `decoder.cs` code that is part of the GUI
+		* Converts the raw hexadecimal CAN data to a binary string to be processed by the `{parameter}ValCalc` functions
 		
 	- `void displayData(double pVoltage, double pCurrent, double pTemperature , int pSoC)`
 		* Displays the reading for every selected parameter
@@ -83,7 +83,7 @@
 		* Calculates the actual result using the formula `(scale_factor * decimal_value + offset)`
 		* These values are found in the DBC file and are hard coded at the moment (and commented above each function)
 		
-	- `int findIndex(...), String reverseString(...)`
+	- `int findIndex(...)`, `String reverseString(...)`
 		* Additional functions created because C++ does not have standard equivalents
 		
 ### *Modifications*
