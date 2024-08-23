@@ -40,6 +40,7 @@
 		* This library allows the microcontroller to:
 			* Establish SPI communication with the MCP2515 CAN module
 			* Read CAN messages
+		* The code itself is based of the [CAN_Read Example](https://github.com/autowp/arduino-mcp2515/blob/master/examples/CAN_read/CAN_read.ino)
 	- [`<SSD1306Ascii.h>`](https://github.com/greiman/SSD1306Ascii)
 		* This is a simpler version of [`<Adafruit_SSD1306.h>`](https://github.com/adafruit/Adafruit_SSD1306) specifically for displaying text
 		* By using this library the MCU's flash memory usage is significantly
