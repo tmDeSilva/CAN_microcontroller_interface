@@ -8,20 +8,6 @@
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* To find the hardware components and microcontroller program click ([here](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/CAN-Reader-Arduino-Code/))
+	* (Includes an in-depth explanation of the connections and program)
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
