@@ -2,13 +2,15 @@
 
 ### Description ###
 
+This branch will give a brief overview of each of the main C# classes used to program the GUI's functionality.
+
 - [`CANDataLoggerPloter.cs`]
 	* The main class
 		- Reads data from the serial port
 		- Plots the data on a graph
 		- Controls all the button and drop-down menu functionality
 		
-- [`CanDecoder.cs`]
+- [`CanDecoder.cs`](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/91580f29a8e3aedceacb94ff7f07078a6634928b/?at=Can-Decoder)
 	- Reads `CANdbcFile.txt` and `EssentialParameters.txt` and creates 5 dictionaries
 	- `ProcessData(string pData)` processes the raw hexadecimal CAN data and returns a list of all the channel components and their decimal values
 	
