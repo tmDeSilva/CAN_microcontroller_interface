@@ -1,12 +1,10 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+*This repository contains the software that:
+	*Programs the microcontroller so that it can read CAN messages from the MCP2515 CAN Module
+	*Reads data sent from the microcontroller, processes it and diplays it onto a GUI
 
 ### How do I get set up? ###
 
