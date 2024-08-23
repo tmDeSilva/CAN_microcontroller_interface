@@ -8,6 +8,6 @@
 
 ### How do I get set up? ###
 
-* To find the hardware components and microcontroller program click ([here](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/CAN-Reader-Arduino-Code/))
+* To find the hardware components and microcontroller program click [here](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/CAN-Reader-Arduino-Code/)
 	* (Includes an in-depth explanation of the connections and program)
 
