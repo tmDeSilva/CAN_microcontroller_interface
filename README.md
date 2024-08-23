@@ -1,7 +1,8 @@
 # README #
 
 ## Description
-
+```cpp
+```
 * This branch contains the microcontroller code and will:
 	* Describe the hardware used and the required connections
 	* Provide an overview of all the code's functions and libraries
@@ -35,54 +36,55 @@
 ### *Embedded code*
 
 * Libraries Used
-	- [<mcp2515.h>](https://github.com/autowp/arduino-mcp2515)
+	
+	- [`<mcp2515.h>`](https://github.com/autowp/arduino-mcp2515)
 		* This library allows the microcontroller to:
 			* Establish SPI communication with the MCP2515 CAN module
 			* Read CAN messages
-	- [<SSD1306Ascii.h>](https://github.com/greiman/SSD1306Ascii)
-		* This is a simpler version of [<Adafruit_SSD1306.h>](https://github.com/adafruit/Adafruit_SSD1306) specifically for displaying text
+	- [`<SSD1306Ascii.h>`](https://github.com/greiman/SSD1306Ascii)
+		* This is a simpler version of [`<Adafruit_SSD1306.h>`](https://github.com/adafruit/Adafruit_SSD1306) specifically for displaying text
 		* By using this library the MCU's flash memory usage is significantly
-	- <SPI.h> 
+	- `<SPI.h>` 
 		* For communication between the MCU and the MCP2515 CAN module
-	- <stdlib.h>
+	- `<stdlib.h>`
 		* For converting raw hexadecimal CAN data to decimal numbers for displaying specific battery parameters
-	- <Wire.h>
+	- `<Wire.h>`
 		* Mainly for I2C communication with the SSD1306 OLED
-	- <SoftwareSerial.h>
+	- `<SoftwareSerial.h>`
 		* For UART communication with the HC-05 module to transmit CAN data via bluetooth
 		
 * Code Specific functions
-	- void setup()
-		* Serial (and software serial) initialization (set baudrate to 115200)
-		* MCP2515 SPI initialization (set bitrate to (CAN_500KBPS, MCP_8MHZ))
+	- `void setup()`
+		* Serial (and software serial) initialization (set baudrate : `Serial.begin(115200)`)
+		* MCP2515 SPI initialization (set bitrate with `mcp2515.setBitrate(CAN_500KBPS, MCP_8MHZ)`)
 		* SSD1306 I2C initialiation 
 		
-	- void loop()
+	- `void loop()`
 		* Checks if a CAN Message has been received
-			* Read the CAN data ID (e.g. 7B3) and check if it is part of the "Important IDs"
+			* Read the CAN data ID (e.g. 7B3) and check if it is part of the `Important IDs` list
 			* If the data in the CAN message (for each ID) has been changed:
 				* Replace the data already stored in a 2D array (called "arr") with the new data
-				* Write the new data to the serial port in the format XXX X XX XX XX XX XX XX XX XX : time
-					* Each X represents a nibble (a hex character)
-					* XXX is the CAN data ID, the next X is the number of bytes of data (usually 8) and the next 8 pairs of nibbles (bytes) are the actual data
-					* time is measured in milliseconds
+				* Write the new data to the serial port in the format `XXX X XX XX XX XX XX XX XX XX : time`
+					* Each `X` represents a nibble (a hex character)
+					* `XXX` is the CAN data ID, the next `X` is the number of bytes of data (usually 8) and the next 8 pairs of nibbles (bytes) are the actual data
+					* `time` is measured in milliseconds
 			* Every "period" number of CAN messsages read process and display the most recent CAN data from OLED parameter IDs
-				* 1937 (Pack Voltage, Pack Current), 1938 (Temperature), 1939 (SoC, SoH)
+				* `1937 (Pack Voltage, Pack Current), 1938 (Temperature), 1939 (SoC, SoH)`
 				
-	- String processData(String pMsg)
+	- `String processData(String pMsg)`
 		* This is a C++ version of the "decoder.cs" code that is part of the GUI
 		* Converts the raw hexadecimal CAN data to a binary string to be processed by the {parameter}ValCalc functions
 		
-	- void displayData(double pVoltage, double pCurrent, double pTemperature , int pSoC)
+	- `void displayData(double pVoltage, double pCurrent, double pTemperature , int pSoC)`
 		* Displays the reading for every selected parameter
-		* Uses "display.home()" rather than "display.clear()" to eliminate the "flickering" affect caused by fully clearing the OLED
+		* Uses `display.home()` rather than `display.clear()` to eliminate the "flickering" affect caused by fully clearing the OLED
 		
-	- double {parameter}ValCalc(double p{parameter}, String pBinaryString)
+	- `double {parameter}ValCalc(double p{parameter}, String pBinaryString)`
 		* Selects the specific section of the binary string to convert to decimal
-		* Calculates the actual result using the formula (scale_factor * decimal_value + offset)
+		* Calculates the actual result using the formula `(scale_factor * decimal_value + offset)`
 		* These values are found in the DBC file and are hard coded at the moment (and commented above each function)
 		
-	- int findIndex(...), String reverseString(...)
+	- `int findIndex(...), String reverseString(...)`
 		* Additional functions created because C++ does not have standard equivalents
 		
 ### *Modifications*
