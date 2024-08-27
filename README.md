@@ -9,6 +9,6 @@
 	* `pySerial`
 	* `dbcFileDecoder` - which is a custom library made to decode the dbc file (it is also included in this branch)
 
-[Go back to the Main repository](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/main/)
+[Go back to the Main repository](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/main)
 
-[Go back to the GUI repository](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/GUI/)
+[Go back to the GUI repository](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/GUI)
