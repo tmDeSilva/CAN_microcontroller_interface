@@ -10,7 +10,7 @@ This branch will give a brief overview of each of the main C# classes used to pr
 		- Plots the data on a graph
 		- Controls all the button and drop-down menu functionality
 		
-- [`CanDecoder.cs`](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/Can-Decoder/) 
+- [`CanDecoder.cs`](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/Can-Decoder)
 	- (Go to this branch to get a more in-depth analysis of how to code works and how the `CANdbcFile.txt` and `EssentialParameters.txt` files play a crucial role in setting up the decoding of the raw CAN data)
 	- Reads `CANdbcFile.txt` and `EssentialParameters.txt` and creates 5 dictionaries
 	- `ProcessData(string pData)` processes the raw hexadecimal CAN data and returns a list of all the channel components and their decimal values
@@ -27,4 +27,4 @@ This branch will give a brief overview of each of the main C# classes used to pr
 	- Updates the `portCombo` drop-down menu
 	
 
-[Go back to the Main repository](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/main/)
+[Go back to the Main repository](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/main)
