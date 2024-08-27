@@ -2,7 +2,8 @@
 
 ### Description ###
 
-This branch will give a brief overview of each of the main C# classes used to program the GUI's functionality.
+* This branch will give a brief overview of each of the main C# classes used to program the GUI's functionality
+* For the original PyQt5 GUI click [here](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/GUI-PyQT5)
 
 - [`CANDataLoggerPloter.cs`]
 	* The main class
