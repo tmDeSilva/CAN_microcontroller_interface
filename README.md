@@ -72,7 +72,7 @@
 				* `1937 (Pack Voltage, Pack Current)`, `1938 (Temperature)`, `1939 (SoC, SoH)`
 				
 	- `String processData(String pMsg)`
-		* This is a C++ version of the [`CanDecoder.cs`](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/Can-Decoder/) code that is part of the GUI
+		* This is a C++ version of the [`CanDecoder.cs`](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/Can-Decoder)code that is part of the GUI
 		* Converts the raw hexadecimal CAN data to a binary string to be processed by the `{parameter}ValCalc` functions
 		
 	- `void displayData(double pVoltage, double pCurrent, double pTemperature , int pSoC)`
@@ -91,4 +91,4 @@
 * The user can change important IDs so that the data written to the serial port is that which is useful to them
 * The user can change OLED parameters (however this process may require renaming and adding functions which should be automated in the future)
 
-[Go back to the Main repository](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/main/)
+[Go back to the Main repository](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/main)
