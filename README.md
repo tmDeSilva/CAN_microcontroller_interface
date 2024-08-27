@@ -2,7 +2,7 @@
 
 ## Description ##
 This branch will provide an in-depth explanation to the `CanDecoder.cs` class.
-For the original python version of this program - click [here](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/Can-Decoder-.py/).
+For the original python version of this program - click [here](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/Can-Decoder-.py).
 
 ### *DBC*
 * All the `BO_` Messages are highlighted form the DBC file and written to the `CANdbcFile.txt` file separated by a `*` character
@@ -93,6 +93,6 @@ Temperature{
 |3|1976|4|
 	
 
-[Go back to the Main repository](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/main/)
+[Go back to the Main repository](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/main)
 
-[Go back to the GUI repository](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/GUI/)
+[Go back to the GUI repository](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/GUI)
