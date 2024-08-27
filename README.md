@@ -1,7 +1,7 @@
 # README #
 
 ## Description ##
-* This branch contains the original python file that the `CanDecoder.cs` class is based off
+* This branch contains the original python file that the [`CanDecoder.cs`](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/Can-Decoder) class is based off
 * It uses `matplotlib.pyplot` and its interactive ("live") plotting capabilities 
 * This was the first program written to decode raw CAN data written to the serial port
 * Libraries used
