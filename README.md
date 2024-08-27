@@ -8,11 +8,11 @@
 
 ### How do I get set up? ###
 
-* To find the hardware components and microcontroller program click [here](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/CAN-Reader-Arduino-Code/)
+* To find the hardware components and microcontroller program click [here](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/CAN-Reader-Arduino-Code)
 	* (Includes an in-depth explanation of the connections and program)
 	
 * By installing the `CAN data logger` folder run `CAN data logger\CAN data logger\bin\CAN data logger.exe` or run the solution instead
-	* To find a break down of the program, [here](https://bitbucket.org/nyobolt/can_microcontroller_interface/src/GUI/) are the main C# classes
+	* To find a break down of the program, [here](https://github.com/tmDeSilva/CAN_microcontroller_interface/tree/GUI) are the main C# classes
 		- `CANDataPlotterLogger.cs`
 		- `DrawingArea.cs`
 		- `CanDecoder.cs`
